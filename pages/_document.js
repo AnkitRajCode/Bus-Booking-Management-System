@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+import Navbar from '../components/Navbar'
 
 class MyDocument extends Document {
     render() {
@@ -16,7 +17,7 @@ class MyDocument extends Document {
                 {/* font aswm */}
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
             </Head>
-            <body>
+            <body className='bg-cyan-900 text-slate-300'>
                 <Main />
                 <NextScript />
             </body>

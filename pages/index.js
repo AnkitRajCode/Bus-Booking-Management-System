@@ -1,7 +1,21 @@
+import Footer from "../components/Footer"
+import Navbar from "../components/Navbar"
+
 const index = () => {
   return (
     <>
-      <h1 className='text-center text-blue-500'>Hello World</h1>
+      <div className='px-20'>
+        {/* Header */}
+        <div className="h-screen w-full">
+          <Navbar/>
+
+        </div>
+        <div>About Us i.e. business description</div>
+        <div>Services</div>
+        <div>Gallery</div>
+        <div>Contact Us</div>
+      </div>
+      <Footer/>
     </>
   )
 }
