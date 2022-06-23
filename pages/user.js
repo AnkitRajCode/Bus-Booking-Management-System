@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { app } from '../firebase/firebase';
+// import { app } from '../firebase/firebase';
 import { useEffect } from 'react';
 import {
   getAuth,
