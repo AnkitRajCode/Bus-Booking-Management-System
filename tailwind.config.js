@@ -12,6 +12,9 @@ module.exports = {
         raleway:['Raleway', 'sans-serif'],
         roboto:['Roboto', 'sans-serif'],
       },
+      backgroundImage: {
+        'bodybackground' : 'linear-gradient(294.47deg, #130B2B 20.94%, #2E1371 100%);',
+      },
     },
   },
   plugins: [],

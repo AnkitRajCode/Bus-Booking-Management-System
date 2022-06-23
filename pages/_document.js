@@ -17,7 +17,7 @@ class MyDocument extends Document {
                 {/* font aswm */}
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
             </Head>
-            <body className='bg-cyan-900 text-slate-300'>
+            <body className='bg-bodybackground text-slate-300'>
                 <Main />
                 <NextScript />
             </body>

@@ -1,11 +1,10 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
 const Navbar = () => {
   return (
     <div className='flex justify-between items-center font-semibold py-6'>
-        <div className='border-2 border-white px-5 py-1'>
-            Navbar Brand
-        </div>
+        <Image src="/Images/bhanu.svg" alt="logo" width="160px" height="100px" />
         <div className='flex space-x-6 items-center'>
             <Link href='/'>
                 <a className=''>Home</a>
