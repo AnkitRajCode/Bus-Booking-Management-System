@@ -36,12 +36,14 @@ export default function User(){
         }
     }, [])
     return ( 
+        <div className='body'>
         <div className="login-div">
         <div className="logo"></div>
         <div className="title">Passenger Login</div>
         <br>
         </br>
         <button className="signin-button" onClick={signUpWithGoogle}>Google</button>
+        </div>
         </div>
     )
 }

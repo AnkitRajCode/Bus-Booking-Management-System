@@ -36,6 +36,7 @@ useEffect(() => {
   }
 }, [])
     return ( 
+      <div className='body'>
      <div className="login-div">
      <div className="logo"></div>
      <div className="title">Admin Login</div>
@@ -49,6 +50,7 @@ useEffect(() => {
      <button className="signin-button" onClick={signIn}>Login</button>
       <div className="link">
      <a href="#">Forgot password ?</a>
+     </div>
      </div>
      </div>
     )

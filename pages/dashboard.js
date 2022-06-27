@@ -1,8 +1,19 @@
 import React from 'react'
-
+import Navbar from "../components/DashNav"
 const Dashboard = () => {
-    return ( <div > Dashboard </div>
-    )
+    return (
+        <>
+          <div className=''>
+            <div className="px-20">
+              <Navbar/>
+              <div className="flex flex-row h-screen">
+                <div className="w-1/3 h-full flex justify-center items-center">
+                </div>
+              </div>
+            </div>
+          </div>
+        </>
+      )
 }
 
 export default Dashboard
