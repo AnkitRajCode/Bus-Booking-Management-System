@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import Navbar from '../components/Navbar'
 import { app } from '../firebase/firebase';
 import { useEffect } from 'react';
 import {
@@ -36,14 +36,17 @@ export default function User(){
         }
     }, [])
     return ( 
-        <div className='body'>
-        <div className="login-div">
-        <div className="logo"></div>
-        <div className="title">Passenger Login</div>
-        <br>
-        </br>
-        <button className="signin-button" onClick={signUpWithGoogle}>Google</button>
-        </div>
+        <div className='w-full h-screen bg-cover bg-center bg-no-repeat px-20' style={{backgroundImage:'url(/Images/login.svg)'}}>
+            <Navbar />
+            <div className=" h-[calc(100vh-80px)] flex justify-center items-center">
+                <div className="flex flex-col justify-between items-center p-8 w-[500px] backdrop-blur-xl  bg-signup rounded-xl border border-slate-200">
+                    <div className='text-3xl font-bold uppercase tracking-wider'>Signup</div>
+                    <div className='text-lg font-medium text-center my-10 w-80'>
+                        Login and access free and Premium quality UI design for websites.
+                    </div>
+                    <button className="w-full py-2 bg-signup rounded-md" onClick={signUpWithGoogle}><i className="fa-brands fa-google"></i> Signup</button>
+                </div>
+            </div>
         </div>
     )
 }
