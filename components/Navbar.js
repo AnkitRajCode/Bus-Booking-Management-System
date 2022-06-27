@@ -4,7 +4,9 @@ import Link from 'next/link'
 const Navbar = () => {
   return (
     <div className='flex justify-between items-center font-semibold'>
-        <Image src="/Images/bhanu.svg" alt="logo" width="120px" height="80px" />
+        <Link href='/'>
+            <Image src="/Images/bhanu.svg" className='cursor-pointer' alt="logo" width="120px" height="80px" />
+        </Link>
         <div className='flex space-x-10 items-center'>
             <Link href='/'>
                 <a><i className="fa-solid fa-house mr-2"></i><span>Home</span></a>
@@ -19,7 +21,7 @@ const Navbar = () => {
                 <a><i className="fa-solid fa-swatchbook mr-2"></i><span>Booking</span></a>
             </Link>
             <Link href='/user'>
-                <a className='px-4 hover:shadow-nav transition-all text-md py-1 bg-navbarButton rounded-sm'><i className="fa-solid fa-arrow-right-to-bracket"></i> Signup</a>
+                <a className='px-4 hover:shadow-nav transition-all text-md py-1 bg-navbarButton rounded-md'><i className="fa-solid fa-arrow-right-to-bracket"></i> Signup</a>
             </Link>
         </div>
     </div>
