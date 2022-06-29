@@ -1,23 +1,33 @@
-import React, { useState } from 'react';
-import Seat from '../components/Seat';
+// import React, { useState } from 'react';
+// import Seat from '../components/Seat';
 
-const Booking = () => {
+// const Booking = () => {
 
-    const [seats, setSeats] = useState([]);
+//     const [seats, setSeats] = useState([]);
 
 
+//   return (
+//     <div>
+//         <SeatContext.Provider value={{seats, setSeats}}>
+//             <Seat  />
+//             {seats.length>0 && seats.map((seat, index) => {
+//             // return (
+//             //   <div key={index}>{seat}</div>
+//             // )
+//           })}
+//         </SeatContext.Provider>
+//     </div>
+//   )
+// }
+
+// export default Booking
+
+import React from 'react'
+
+const booking = () => {
   return (
-    <div>
-        <SeatContext.Provider value={{seats, setSeats}}>
-            <Seat  />
-            {seats.length>0 && seats.map((seat, index) => {
-            // return (
-            //   <div key={index}>{seat}</div>
-            // )
-          })}
-        </SeatContext.Provider>
-    </div>
+    <div>bookingit </div>
   )
 }
 
-export default Booking
+export default booking
