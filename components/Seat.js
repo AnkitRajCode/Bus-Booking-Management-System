@@ -1,4 +1,6 @@
 import React, { useState, useContext } from 'react';
+import { app, database } from '../firebase/firebase';
+import { collection, addDoc } from 'firebase/firestore'
 // import { SeatContext } from '../contexts/SeatContext';
 
 const MyButton = ({selectedDate, seatno, seatBooked}) => {
@@ -44,11 +46,23 @@ const MyButton = ({selectedDate, seatno, seatBooked}) => {
 }
 
 const Seat = () => {
+    const databaseRef = collection(database, 'Bus Booking')
     const [selectedDate, setSelectedDate] = useState('');
     // const { seats, setSeats } = useContext(SeatContext);
     const [seatBooked, setSeatBooked] = useState([]);
 
-
+    const addData = () => {
+      addDoc(databaseRef, {
+        BusBooking: seatBooked
+      })
+      .then(() => {
+        alert("data sent");
+        setSeatBooked([]);
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+    }
     
   return (
     <div>
@@ -125,7 +139,7 @@ const Seat = () => {
         </div>
         
         <MyButton selectedDate={selectedDate}/>
-        <button onClick={(e) => console.log(seatBooked)}>submit</button>
+        <button onClick={addData}>submit</button>
     </div>
   )
 }
