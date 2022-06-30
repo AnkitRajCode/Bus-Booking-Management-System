@@ -1,77 +1,12 @@
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import Seat from '../components/Seat'
 const booking = () => {
   return (
     <>
       <div className='mx-20 mb-20'>
         <Navbar />
-        <div className='flex justify-center'>
-          <div className='w-[330px] h-[700px] bg-contain bg-center bg-no-repeat' style={{backgroundImage:"url(/Images/booking.svg)"}}>
-            <div className='ml-[75px] pt-52'>
-              <i className="fa-solid fa-square"></i>
-              <span className='ml-[140px]'>
-                <i className="fa-solid fa-square"></i>
-                <i className="fa-solid fa-square ml-7"></i>
-              </span>
-            </div>
-            <div className='ml-[75px] pt-7'>
-              <i className="fa-solid fa-square"></i>
-              <span className='ml-[140px]'>
-                <i className="fa-solid fa-square"></i>
-                <i className="fa-solid fa-square ml-7"></i>
-              </span>
-            </div>
-            <div className='ml-[75px] pt-7'>
-              <i className="fa-solid fa-square"></i>
-              <span className='ml-[140px]'>
-                <i className="fa-solid fa-square"></i>
-                <i className="fa-solid fa-square ml-7"></i>
-              </span>
-            </div>
-            <div className='ml-[75px] pt-7'>
-              <i className="fa-solid fa-square"></i>
-              <span className='ml-[140px]'>
-                <i className="fa-solid fa-square"></i>
-                <i className="fa-solid fa-square ml-7"></i>
-              </span>
-            </div>
-            <div className='ml-[75px] pt-7'>
-              <i className="fa-solid fa-square"></i>
-              <span className='ml-[140px]'>
-                <i className="fa-solid fa-square"></i>
-                <i className="fa-solid fa-square ml-7"></i>
-              </span>
-            </div>
-            <div className='ml-[75px] pt-7'>
-              <i className="fa-solid fa-square"></i>
-              <span className='ml-[140px]'>
-                <i className="fa-solid fa-square"></i>
-                <i className="fa-solid fa-square ml-7"></i>
-              </span>
-            </div>
-            <div className='ml-[75px] pt-7'>
-              <i className="fa-solid fa-square"></i>
-              <span className='ml-[140px]'>
-                <i className="fa-solid fa-square"></i>
-                <i className="fa-solid fa-square ml-7"></i>
-              </span>
-            </div>
-            <div className='ml-[75px] pt-7'>
-              <i className="fa-solid fa-square"></i>
-              <span className='ml-[140px]'>
-                <i className="fa-solid fa-square"></i>
-                <i className="fa-solid fa-square ml-7"></i>
-              </span>
-            </div>
-            <div className='ml-[75px] pt-7'>
-              <i className="fa-solid fa-square"></i>
-              <span className='ml-[140px]'>
-                <i className="fa-solid fa-square"></i>
-                <i className="fa-solid fa-square ml-7"></i>
-              </span>
-            </div>
-          </div>
-        </div>
+        <Seat />
 
         <div className='py-5 flex justify-evenly'>
           <div>
