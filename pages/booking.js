@@ -76,9 +76,6 @@ const booking = () => {
     const getData = async () => {
       await getDocs(databaseRef)
       .then((res) => {
-        console.log(res.docs.map((data) => {
-          return {...data.data(), id: data.id};
-        }));
         setFireData(res.docs.map((data) => {
           return {...data.data(), id: data.id};
         }));
