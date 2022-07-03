@@ -1,6 +1,6 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { app, database } from '../firebase/firebase';
-import { collection, addDoc } from 'firebase/firestore'
+import { collection, addDoc, getDocs } from 'firebase/firestore'
 // import { SeatContext } from '../contexts/SeatContext';
 
 const MyButton = ({selectedDate, seatno, seatBooked}) => {
@@ -50,6 +50,7 @@ const Seat = () => {
     const [selectedDate, setSelectedDate] = useState('');
     // const { seats, setSeats } = useContext(SeatContext);
     const [seatBooked, setSeatBooked] = useState([]);
+    const [fireData, setFireData] = useState([]);
 
     const addData = () => {
       addDoc(databaseRef, {
@@ -63,6 +64,20 @@ const Seat = () => {
         console.log(err);
       })
     }
+
+    const getData = async () => {
+      await getDocs(databaseRef)
+      .then((res) => {
+        setFireData(res.docs.map((data) => {
+          return {...data.data(), id: data.id};
+        }));
+      })
+    }
+  
+  
+    useEffect(() => {
+      getData();
+    }, [])
     
   return (
     <div>
@@ -140,6 +155,20 @@ const Seat = () => {
         
         <MyButton selectedDate={selectedDate}/>
         <button onClick={addData}>submit</button>
+        
+        {fireData.map((data) => {
+          return (
+            <div>{data.BusBooking.map((dat) => {
+              return (
+                <div>{dat.seats.map((seat) => {
+                  return (
+                    <div>{seat.name}</div>
+                  )
+                })}</div>
+              )
+            })}</div>
+          )
+        })}
     </div>
   )
 }
