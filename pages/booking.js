@@ -52,7 +52,7 @@ const MyButton = ({selectedDate, seatno, seatBooked}) => {
 
 
 
-const booking = () => {
+const Booking = () => {
 
   const databaseRef = collection(database, 'Bus Booking')
     const [selectedDate, setSelectedDate] = useState('');
@@ -169,19 +169,19 @@ const booking = () => {
     </div>
 
 
-        {fireData.map((data) => {
+        {fireData.map((data,index) => {
           return (
-            <div>
-              {data.BusBooking.map((dat) => {
+            <div key={index}>
+              {data.BusBooking.map((dat, index) => {
                 return (
-                  <div key={dat.id} className='py-5 flex justify-evenly'>
+                  <div key={index} className='py-5 flex justify-evenly'>
                     <div>Date: {dat.date}</div>
                     <div>
                       <div className='text-xl font-semibold'>Seat</div>
                       <div>
-                        {dat.seats.map((seat) => {
+                        {dat.seats.map((seat , index) => {
                           return (
-                            <div>{seat.name}</div>
+                            <div key={index}>{seat.name}</div>
                           )
                         })}
                       </div>
@@ -190,9 +190,9 @@ const booking = () => {
                     <div>
                       <div className='text-xl font-semibold'>Price</div>
                       <div>
-                        {dat.seats.map((seat) => {
+                        {dat.seats.map((seat,index) => {
                           return (
-                            <div>$ 45</div>
+                            <div key={index}>$ 45</div>
                           )
                         })}
                       </div>
@@ -217,4 +217,4 @@ const booking = () => {
   )
 }
 
-export default booking
+export default Booking
